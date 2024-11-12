@@ -1,0 +1,20 @@
+def ler_valores_distintos():
+    vetor = []
+    while len(vetor) < 10:
+        valor = int(input(f"Digite o {len(vetor) + 1}º valor distinto: "))
+        if valor not in vetor:
+            vetor.append(valor)
+        else:
+            print("Valor já inserido, por favor digite um valor distinto.")
+    return vetor
+
+def filtrar_maiores_que_100(vetor):
+    return [num for num in vetor if num > 100]
+
+vetor = ler_valores_distintos()
+
+maiores_que_100 = filtrar_maiores_que_100(vetor)
+
+print("Valores digitados:", vetor)
+print(f"Quantidade de valores maiores que 100: {len(maiores_que_100)}")
+print("Valores maiores que 100:", maiores_que_100)
