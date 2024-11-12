@@ -1,0 +1,19 @@
+def ler_valores_distintos():
+    vetor = []
+    while len(vetor) < 10:
+        valor = int(input(f"Digite o {len(vetor) + 1}º valor distinto: "))
+        if valor not in vetor:
+            vetor.append(valor)
+        else:
+            print("Valor já inserido, por favor digite um valor distinto.")
+    return vetor
+
+def inverter_vetor(vetor):
+    return vetor[::-1]
+
+vetor_a = ler_valores_distintos()
+
+vetor_b = inverter_vetor(vetor_a)
+
+print("Vetor A:", vetor_a)
+print("Vetor B (ordem inversa de A):", vetor_b)
