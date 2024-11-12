@@ -1,0 +1,20 @@
+def preencher_vetor():
+    return [int(input(f"Digite o um número: ")) for i in range(8)]
+
+def contar_e_somar_maiores(vetor):
+    maiores = [num for num in vetor if num > 30]
+    return len(maiores), sum(maiores)
+
+def soma_total(vetor):
+    return sum(vetor)
+
+vetor = preencher_vetor()
+
+quant_maiores, soma_maiores = contar_e_somar_maiores(vetor)
+
+soma_todos = soma_total(vetor)
+
+print("Valores do vetor:", vetor)
+print(f"Quantidade de números maiores que 30: {quant_maiores}")
+print(f"Soma dos números maiores que 30: {soma_maiores}")
+print(f"Soma de todos os números: {soma_todos}")
